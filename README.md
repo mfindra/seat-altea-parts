@@ -56,18 +56,6 @@ Or just double-click `index.html`.
     └── images/*.png      # diagram illustrations
 ```
 
-## Publishing to GitHub
-
-The repository is ready to push:
-
-```bash
-git remote add origin git@github.com:<you>/seat-altea-parts.git
-git push -u origin main
-```
-
-To serve it as a website, enable GitHub Pages for the repository (no build needed —
-the site works from the repo root).
-
 ## Data
 
 `data/` is included in the repository, so the viewer works as-is. It contains
