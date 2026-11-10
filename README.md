@@ -1,69 +1,45 @@
 # SEAT Altea, Altea XL & Toledo — Interactive Parts Diagrams
 
-Offline, English-language viewer for the official ETKA-style parts diagrams of the
-**SEAT Altea, Altea XL and Toledo (Europe), all model years 2004–2015, main group
-9 — Electrical equipment**.
+Explore the electrical parts diagrams for the **SEAT Altea, Altea XL and Toledo**
+(model years 2004–2015) in your browser. The viewer is fully offline — no install,
+account or server needed.
 
-The viewer reproduces the catalog experience: every diagram is rendered with
-clickable hotspots over the illustration, linked to the full parts table with part
-numbers, descriptions, quantities and engine applicability. Diagrams are grouped
-by model year in the sidebar, with a year filter and global search.
+## What you can do
 
-## Features
+- Browse diagrams grouped by model year
+- Click numbered hotspots on a diagram to find the matching parts
+- Search by part number, description or diagram name, with matching rows highlighted
+- Click a part number to copy it to the clipboard
+- Pan and zoom around large illustrations
+- Resize the sidebar and parts panel to suit your screen
+- Share direct links to a specific diagram
+- Move between diagrams with the `←` and `→` keys
 
-- Interactive diagrams — pan, zoom, clickable part hotspots
-- Parts table per diagram: position, part number, description, note, quantity, engine codes
-- Click a part number to copy it, with a confirmation box
-- All model years (2004–2015), grouped in the sidebar with a year filter
-- Russian catalog terms translated to English (curated and generated glossaries)
-- Global search across part numbers, part names and diagram titles, with matching rows highlighted
-- Resizable sidebar and parts panel (widths saved between visits)
-- Deep links (`index.html#2011-90300-090300631`), keyboard navigation (`←` / `→`)
-- Fully offline: static HTML/JS/CSS, no server, no build step, no dependencies
+## Open the viewer
 
-## Quick start
+Online: **https://mfindra.github.io/seat-altea-parts/**
 
-All catalog data and illustrations are included. No build or server needed.
+Offline: download the repository and open `index.html` in a browser.
 
-```bash
-open index.html      # macOS
-```
+## Tips
 
-Or just double-click `index.html`.
+- Search accepts several words, for example `alternator belt`.
+- Spaced part numbers work too: `06F 903 143 F`.
+- Use the year filter to narrow the diagram list.
+- `+` / `-` zoom, `0` fits the diagram to the screen, `Esc` closes the tooltip.
 
-## How it works
+## Contents
 
-- `index.html` + `assets/` — the viewer (vanilla JS/CSS).
-  `assets/glossary.js`, `assets/glossary-auto.js` and
-  `assets/glossary-words-auto.js` translate Russian catalog terms to English.
-- `data/data.js` — catalog snapshot loaded by the viewer.
-- `data/manifest.json` — the same catalog in readable JSON form.
-- `data/images/*.png` — diagram illustrations.
-
-## Repository layout
-
-```
-├── index.html            # viewer entry point
-├── assets/
-│   ├── app.js            # viewer logic
-│   ├── style.css         # viewer styles
-│   ├── glossary.js       # curated Russian → English glossary
-│   ├── glossary-auto.js  # generated full-string translations
-│   └── glossary-words-auto.js  # generated word-level translations
-└── data/
-    ├── manifest.json     # catalog metadata and parts tables
-    ├── data.js           # catalog data loaded by the viewer
-    └── images/*.png      # diagram illustrations
-```
-
-## Data
-
-`data/` is included in the repository, so the viewer works as-is. It contains
-1,163 diagrams with 33,624 parts and their illustrations.
+The catalog covers 1,163 diagrams and 33,624 parts, with their illustrations.
 
 Diagram images and parts data originate from the ETKA catalog and remain the
 property of their respective owners (Volkswagen AG). They are provided for
-personal reference only; always verify part fitment with a dealer before ordering.
+personal reference only — always verify part fitment with a dealer before ordering.
+
+## License
+
+The application code is MIT licensed. The diagram images and parts data are not
+covered by that license.
 
 ## Disclaimer
 
