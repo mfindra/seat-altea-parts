@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEAT Altea — Parts Diagrams</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header id="topbar">
+  <div class="brand">
+    <span class="brand-mark">A</span>
+    <div class="brand-text">
+      <div class="brand-title">SEAT Altea <span class="muted" id="brand-years"></span></div>
+      <div class="brand-sub">Group 9 — Electrical equipment</div>
+    </div>
+  </div>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search part no., description or diagram…" autocomplete="off" spellcheck="false">
+  </div>
+  <select id="year-filter" title="Filter by model year"></select>
+  <div class="vehicle" id="stats">—</div>
+</header>
+
+<div id="layout">
+  <nav id="sidebar">
+    <div id="sidebar-list"></div>
+  </nav>
+  <div class="panel-resizer" id="sidebar-resizer" title="Drag to resize sidebar"></div>
+
+  <main id="main">
+    <div id="diagram-head">
+      <div class="dh-left">
+        <h1 id="diagram-title">—</h1>
+      </div>
+      <div class="dh-right">
+        <span id="diagram-meta" class="muted"></span>
+      </div>
+    </div>
+
+    <div id="workspace">
+      <div id="viewport">
+        <div id="stage"></div>
+        <div id="no-image" hidden>
+          <p>This is a catalog list page — it has no illustration, only the parts table.</p>
+        </div>
+        <div id="zoom-controls">
+          <button id="zoom-in" title="Zoom in">+</button>
+          <button id="zoom-out" title="Zoom out">−</button>
+          <button id="zoom-fit" title="Fit to screen">⛶</button>
+          <button id="zoom-100" title="Original size">1:1</button>
+        </div>
+      </div>
+      <div class="panel-resizer" id="parts-resizer" title="Drag to resize parts panel"></div>
+
+      <aside id="parts-panel">
+        <div class="parts-head">Parts <span id="parts-count" class="muted"></span></div>
+        <div id="parts-scroll">
+          <table id="parts-table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Part no.</th>
+                <th>Description</th>
+                <th>Note</th>
+                <th>Qty</th>
+                <th>Engines</th>
+              </tr>
+            </thead>
+            <tbody id="parts-body"></tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<div id="tooltip" hidden></div>
+<div id="copy-toast" hidden></div>
+
+<div id="empty" hidden>
+  <div class="empty-card">
+    <h2>No parts data found</h2>
+    <p>Catalog data was not found in <code>data/</code>.</p>
+    <p>Make sure <code>data/data.js</code> and <code>data/images/</code> are present, then reload this page.</p>
+  </div>
+</div>
+
+<noscript>
+  <div id="noscript">This viewer requires JavaScript.</div>
+</noscript>
+
+<script src="assets/glossary.js"></script>
+<script src="assets/glossary-auto.js"></script>
+<script src="assets/glossary-words-auto.js"></script>
+<script src="data/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
